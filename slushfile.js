@@ -63,8 +63,8 @@ gulp.task('default', function (callback) {
       function (callback) {
         gulp
           .src([
-            __dirname + '/templates/**/*.*',
-            '!' + __dirname + '/templates/gulp/icons.template.scss'
+            __dirname + '/templates/**/**',
+            '!' + __dirname + '/templates/gulp/icons.template.scss',
           ])
           .pipe(template(answers))
           .pipe(rename(function(file) {
