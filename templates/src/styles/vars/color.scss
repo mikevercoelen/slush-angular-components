@@ -1,0 +1,26 @@
+/**
+ * Colors
+ */
+
+// grayscale
+$color-black: #000;
+$color-white: #FFF;
+
+// common
+$color-text: rgba(0, 0, 0, .8);
+$color-sub-text: rgba(0, 0, 0, .3);
+$color-border: rgba(0, 0, 0, .11);
+
+// flat colors
+$color-green: #02c595;
+$color-blue: #24aae4;
+$color-red: #e34c46;
+$color-purple: #9383c1;
+$color-yellow: #ffbf43;
+
+// branding
+$color-primary: $color-blue;
+$color-secondary: $color-green;
+
+// app
+$color-body-bg: #f2f2f2;

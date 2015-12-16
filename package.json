@@ -1,0 +1,33 @@
+{
+  "name": "slush-angular-components",
+  "version": "0.0.1",
+  "description": "Slush generator for Angular Components architecture",
+  "main": "index.js",
+  "preferGlobal": true,
+  "keywords": [
+    "slushgenerator",
+    "angular",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://tomgrooffer@github.com/tomgrooffer/slush-angular-components.git"
+  },
+  "author": "Mike Vercoelen <mike.vercoelen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomgrooffer/slush-angular-components/issues"
+  },
+  "homepage": "https://github.com/tomgrooffer/slush-angular-components#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "gulp": "^3.9.0",
+    "gulp-conflict": "^0.4.0",
+    "gulp-install": "^0.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-template": "^3.1.0",
+    "inquirer": "^0.11.0",
+    "merge-stream": "^1.0.0",
+    "underscore.string": "^3.2.2"
+  }
+}

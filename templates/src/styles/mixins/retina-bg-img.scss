@@ -1,0 +1,13 @@
+/**
+ * Example usage:
+ *
+ * @include retina-bg-img('logo/small', 'png');
+ */
+
+@mixin retina-bg-img($file, $type) {
+  background-image: url('../images/' + $file + '.' + $type);
+
+  @include media('retina2x') {
+    background-image: url('../images/' + $file + '@2x.' + $type);
+  }
+}

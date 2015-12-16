@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="<!-- @echo MODULE_NAME -->">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>myApp</title>
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="generated-styles/main.css" />
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+    <div id="view-container" ui-view></div>
+
+    <!-- build:js -->
+      <!-- build:node_modules -->
+      <script src="node_modules/jquery/dist/jquery.js"></script>
+      <script src="node_modules/angular/angular.js"></script>
+      <script src="node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+      <script src="node_modules/angular-animate/angular-animate.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:app -->
+      <script src="generated-scripts/module.js"></script>
+      <script src="generated-scripts/templates.js"></script>
+      <script src="generated-scripts/components.js"></script>
+      <!-- endbuild -->
+    <!-- endbuild -->
+
+  </body>
+</html>
