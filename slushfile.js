@@ -28,7 +28,7 @@ gulp.task('default', function (callback) {
   }, {
     name: 'appDescription',
     message: 'What is the description?',
-    default: 'My Angular Components app'
+    default: ''
   }, {
     name: 'appRepository',
     message: 'What is the repo?',
@@ -36,11 +36,11 @@ gulp.task('default', function (callback) {
   }, {
     name: 'appAuthor',
     message: 'Name of the author?',
-    default: 'Your name'
+    default: ''
   }, {
     name: 'appEmail',
     message: 'Author email?',
-    default: 'your-email@mail.com'
+    default: ''
   }];
 
   inquirer.prompt(prompts, function (answers) {
@@ -63,7 +63,7 @@ gulp.task('default', function (callback) {
       function (callback) {
         gulp
           .src([
-            __dirname + '/templates/**/*',
+            __dirname + '/templates/**/*.*',
             '!' + __dirname + '/templates/gulp/icons.template.scss'
           ])
           .pipe(template(answers))
