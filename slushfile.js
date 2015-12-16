@@ -12,7 +12,7 @@ var isTrue = function(v){
   return (v == "yes" || v == "true") ? true : false;
 }
 
-gulp.task('default', function (callback) {
+gulp.task('default', function (done) {
   var prompts = [{
     name: 'appName',
     message: 'What is the name?',
@@ -52,11 +52,10 @@ gulp.task('default', function (callback) {
     answers.appName = _.slugify(answers.appName);
     answers.appAuthorSlug = _.slugify(answers.appAuthor);
 
-    async.series([
+    async.parallel([
       function (callback) {
         gulp
           .src(__dirname + '/templates/gulp/icons.template.scss')
-          .pipe(conflict('./gulp/'))
           .pipe(gulp.dest('./gulp/'))
           .on('end', callback);
       },
@@ -72,18 +71,11 @@ gulp.task('default', function (callback) {
               file.basename = '.' + file.basename.slice(1);
             }
           }))
-          .pipe(conflict('./'))
           .pipe(gulp.dest('./'))
-          .pipe(install())
           .on('end', callback);
-      },
-      function (error) {
-        if (error) {
-          return callback(error);
-        }
-
-        callback();
       }
-    ]);
+    ], function () {
+      done();
+    });
   });
 });
