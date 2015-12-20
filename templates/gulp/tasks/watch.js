@@ -11,10 +11,15 @@ gulp.task('watch-recompile', function (callback) {
 gulp.task('watch', ['load-env'], function () {
 
   watch([
-    'src/module.js',
-    'src/*.html',
     'src/views/**/*.html',
     'src/components/**/*.html'
+  ], function () {
+    gulp.start('templates');
+  });
+
+  watch([
+    'src/module.js',
+    'src/*.html'
   ], function () {
     gulp.start('watch-recompile');
   });
