@@ -56,7 +56,8 @@ gulp.task('default', function (done) {
       function (callback) {
         gulp
           .src(__dirname + '/templates/gulp/icons.template.scss')
-          .pipe(gulp.dest('./gulp/'))
+          .pipe(conflict('./gulp'))
+          .pipe(gulp.dest('./gulp'))
           .on('end', callback);
       },
       function (callback) {
@@ -71,6 +72,7 @@ gulp.task('default', function (done) {
               file.basename = '.' + file.basename.slice(1);
             }
           }))
+          .pipe(conflict('./'))
           .pipe(gulp.dest('./'))
           .on('end', callback);
       }
