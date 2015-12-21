@@ -29,7 +29,7 @@ gulp.task('html:dist', ['html'], function () {
       comments: false,
       conditionals: false,
       spare: false,
-      quotes: false,
+      quotes: true,
       loose: false
     }))
     .pipe(gulp.dest('target/dist'));

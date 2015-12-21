@@ -5,7 +5,7 @@ var gutil = require('gulp-util');
 gulp.task('dist', function (callback) {
   gutil.env.production = true;
 
-  runSequence('clean', ['scripts:dist', 'styles:dist'], 'html', function () {
+  runSequence('clean', ['scripts:dist', 'styles:dist'], 'html:dist', function () {
     runSequence('clean:post-dist', ['copy'], callback);
   });
 });
