@@ -1,6 +1,6 @@
 {
   "name": "slush-angular-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Slush generator for Angular Components architecture",
   "main": "index.js",
   "preferGlobal": true,
